@@ -1,11 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
 
 import courseImg01 from "../../assests/images/web-development.png";
 import courseImg02 from "../../assests/images/kids-learning.png";
 import courseImg03 from "../../assests/images/seo.png";
 import courseImg04 from "../../assests/images/ui-ux.png";
-import FreeCourseCard from "./FreeCourseCard";
 
 import "./free-course.css";
 
@@ -24,7 +22,6 @@ const freeCourseData = [
     students: 5.3,
     rating: 1.7,
   },
-
   {
     id: "03",
     title: "Search Engine Optimization - Basic",
@@ -32,7 +29,6 @@ const freeCourseData = [
     students: 5.3,
     rating: 1.7,
   },
-
   {
     id: "04",
     title: "Basic UI/UX Design - Figma",
@@ -45,19 +41,36 @@ const freeCourseData = [
 const FreeCourse = () => {
   return (
     <section>
-      <Container>
-        <Row>
-          <Col lg="12" className="text-center mb-5">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 text-center mb-5">
             <h2 className="fw-bold">Our Free Courses</h2>
-          </Col>
+          </div>
 
-          {freeCourseData.map((item) => (
-            <Col lg="3" md="4" className="mb-4" key={item.id}>
-              <FreeCourseCard item={item} />
-            </Col>
+          {freeCourseData.map((course) => (
+            <div className="col-lg-3 col-md-4 mb-4" key={course.id}>
+              <div className="card h-100 shadow-sm border-0">
+                <img
+                  src={course.imgUrl}
+                  className="card-img-top"
+                  alt={course.title}
+                />
+                <div className="card-body text-center">
+                  <h5 className="card-title fw-bold">{course.title}</h5>
+                  <p className="mb-1">
+                    <i className="ri-user-line me-1"></i>
+                    {course.students}k Students
+                  </p>
+                  <p className="mb-0">
+                    <i className="ri-star-fill text-warning me-1"></i>
+                    {course.rating} Rating
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </section>
   );
 };
