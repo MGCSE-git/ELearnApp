@@ -45,9 +45,12 @@ const Courses = () => {
               <div className="course__top__left w-50">
                 <h2>Our Popular Courses</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                  consequatur libero quod voluptatibus ullam quia quas, vitae
-                  voluptatem recusandae reprehenderit!
+                  Unlock your creative potential and turn your ideas into stunning visuals! 
+                  Whether it’s mastering Graphic Design, creating eye-catching layouts in Photoshop, 
+                  bringing concepts to life in Adobe XD and Figma, or crafting beautiful, 
+                  user-friendly websites with UI/UX design, our expert-led courses will 
+                  give you the skills to stand out in the digital world. 
+                  Start your journey today and design your future!
                 </p>
               </div>
 
