@@ -64,7 +64,7 @@ const Footer = () => {
         </span>
         <span>
           <a href="#">
-            <i className="ri-instagram-fill"></i>
+            <i className="ri-instagram-line"></i>
           </a>
         </span>
         <span>
