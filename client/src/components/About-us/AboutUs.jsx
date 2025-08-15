@@ -20,9 +20,8 @@ const AboutUs = () => {
             <div className="about__content">
               <h2>About Us</h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Excepturi cupiditate animi deserunt libero nesciunt corporis
-                explicabo nobis ex quo molestiae!
+                "Learn anywhere, grow everywhere."
+Our e-learning portal is your gateway to industry-relevant skills, expert mentors, and hands-on projects. From tech to design, we bring world-class learning right to your fingertips—empowering you to achieve your goals at your own pace.
               </p>
 
               <div className="about__counter">
