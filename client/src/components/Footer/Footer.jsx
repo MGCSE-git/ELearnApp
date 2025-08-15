@@ -48,78 +48,73 @@ const footerInfoLinks = [
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
-        <Row>
-          <Col lg="3" md="6" className="mb-4">
-            <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> 
-            </h2>
+      <div className="container">
+  <div className="row">
+    <div className="col-lg-3 col-md-6 mb-4">
+      <h2 className="d-flex align-items-center gap-1">
+        <i className="ri-pantone-line"></i>
+      </h2>
 
-            <div className="follows">
-              <p className="mb-0">Follow us on social media</p>
-              <span>
-                {" "}
-                <a href="#">
-                  <i class="ri-facebook-line"></i>
-                </a>
-              </span>
+      <div className="follows">
+        <p className="mb-0">Follow us on social media</p>
+        <span>
+          <a href="#">
+            <i className="ri-facebook-line"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <i className="ri-instagram-fill"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <i className="ri-linkedin-line"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <i className="ri-twitter-line"></i>
+          </a>
+        </span>
+      </div>
+    </div>
 
-              <span>
-                {" "}
-                <a href="#">
-                  <i class="ri-instagram-fill"></i>
-                </a>
-              </span>
+    <div className="col-lg-3 col-md-6 mb-4">
+      <h6 className="fw-bold">Explore</h6>
+      <ul className="list-group link__list">
+        {footerQuickLinks.map((item, index) => (
+          <li key={index} className="list-group-item border-0 ps-0 link__item">
+            <a href={item.url}>{item.display}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-              <span>
-                {" "}
-                <a href="#">
-                  <i class="ri-linkedin-line"></i>
-                </a>
-              </span>
+    <div className="col-lg-3 col-md-6 mb-4">
+      <h6 className="fw-bold">Information</h6>
+      <ul className="list-group link__list">
+        {footerInfoLinks.map((item, index) => (
+          <li key={index} className="list-group-item border-0 ps-0 link__item">
+            <a href={item.url}>{item.display}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-              <span>
-                {" "}
-                <a href="#">
-                  <i class="ri-twitter-line"></i>
-                </a>
-              </span>
-            </div>
-          </Col>
-
-          <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Explore</h6>
-            <ListGroup className="link__list">
-              {footerQuickLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 link__item">
-                  {" "}
-                  <a href={item.url}>{item.display}</a>
-                </ListGroupItem>
-              ))}
-            </ListGroup>
-          </Col>
-
-          <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Information</h6>
-            <ListGroup className="link__list">
-              {footerInfoLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 link__item">
-                  {" "}
-                  <a href={item.url}>{item.display}</a>
-                </ListGroupItem>
-              ))}
-            </ListGroup>
-          </Col>
-
-          <Col lg="3" md="6">
-            <h6 className="fw-bold">Get in Touch</h6>
-
-            <p>Address: Perundurai, India</p>
-            <p> Phone: +91 000000000000 </p>
-            <p>Email: support@learners.com</p>
-          </Col>
-        </Row>
-      </Container>
+    <div className="col-lg-3 col-md-6">
+      <h6 className="fw-bold">Get in Touch</h6>
+      <p>Address: Perundurai, India</p>
+      <p>Phone: +91 000000000000</p>
+      <p>Email: support@learners.com</p>
+    </div>
+  </div>
+</div>
+      <div className="footer__bottom text-center">
+        <p className="mb-0">
+          &copy; {new Date().getFullYear()} Learners. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 };
